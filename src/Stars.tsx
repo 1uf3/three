@@ -7,10 +7,12 @@ export default function Stars(props: JSX.IntrinsicElements['mesh']) {
   // This reference will give us direct access to the mesh
   const mesh = useRef<THREE.Mesh>(null!)
   let theta = 0;
+  
   useFrame(() => {
     const r = 5 * Math.sin(THREE.MathUtils.degToRad((theta += 0.01)));
     mesh.current.rotation.set(r, r, r);
   });
+
   const [geo, mat, coords] = useMemo(() => {
     const geo = new THREE.SphereBufferGeometry(1, 32, 32);
     const mat = new THREE.MeshBasicMaterial({

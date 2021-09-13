@@ -22,8 +22,32 @@ body {
 }
 
 .overlay {
-  position: relative;
-  order: 1;
-  flex: 1;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position:relative;
+  bottom: 100px;
+  right: 200px;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));	
+  font-size: 100px;
+}
+
+.input {
+  position:relative;
+  bottom: 140px;
+  right: 200px;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));	
+  font-size: 20px;
 }
