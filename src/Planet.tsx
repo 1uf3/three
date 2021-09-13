@@ -8,8 +8,7 @@ export default function Planet(props: JSX.IntrinsicElements['mesh']) {
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(
     (state, delta) => (
-      (mesh.current.rotation.y += 0.01),
-      (mesh.current.rotation.x += 0.005)
+      mesh.current.rotation.y = mesh.current.rotation.x += 0.005
     )
   );
 
